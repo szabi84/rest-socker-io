@@ -11,7 +11,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get()
+  @Get('ping')
   public async pingClients(): Promise<string> {
     await this.chatGateway.broadcast("test message");
     return 'broadcast'
